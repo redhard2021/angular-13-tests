@@ -1,0 +1,15 @@
+<h4>List of my Hero's</h4>
+
+<ul>
+    <li *ngFor="let heroe of heroes">{{heroe}}</li>
+</ul>
+<div *ngIf="lastHero; else showMsg">
+    <h4>Return Dead Hero</h4>
+    <p>{{lastHero}}</p>
+</div>
+<ng-template #showMsg>
+    <p>No has borrado nating pa</p>
+</ng-template>
+
+<button (click)="deleteLastItem()">Delete Last</button>
+<button (click)="mostrarLog()">Show lastHero</button>
